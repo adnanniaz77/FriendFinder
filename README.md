@@ -15,12 +15,14 @@ You will use Express to handle routing. Make sure you deploy your app to Heroku 
 
 <li>Your <code>htmlRoutes.js</code> file should include two routes:
 
-    A GET Route to <code>/survey</code> which should display the survey page.
-    A default, catch-all route that leads to <code>home.html</code> which displays the home page.
+<ul>
+    <li>A GET Route to <code>/survey</code> which should display the survey page.</li>
+    <li>A default, catch-all route that leads to <code>home.html</code> which displays the home page.</li>
+</ul>
 
 <li>Your <code>apiRoutes.js</code> file should contain two routes:
     <ul>
-    <li></li>
+    <li>A GET route with the url <code>/api/friends</code>. This will be used to display a JSON of all possible friends.</li>
     <li>A POST routes <code>/api/friends</code>. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.</li>
     </ul>
 </li>
