@@ -151,11 +151,31 @@
             </div>
         </footer>
 
+        <div id="results-modal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title"><strong>Best Match</strong></h2>
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="match-name"></h2>
+                        <img id="match-img"
+                            src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 
-
-
-
+    <!-- SCRIPTS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -167,6 +187,8 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- app -->
     <script>
         $(document).ready(() => {
             $("#submit").click(() => {
@@ -182,9 +204,11 @@
                 let surveyQ8 = $("#q8").val();
                 let surveyQ9 = $("#q9").val();
                 let surveyQ10 = $("#q10").val();
-                console.log(surveyName, surveyLink, surveyQ1, surveyQ2, surveyQ3, surveyQ4, surveyQ6, surveyQ7, surveyQ8, surveyQ9, surveyQ10);
+                console.log(surveyName, surveyLink, surveyQ1, surveyQ2, surveyQ3, surveyQ4, surveyQ5, surveyQ6, surveyQ7, surveyQ8, surveyQ9, surveyQ10);
             });
         })
+
+        function validateForm();
     </script>
 </body>
 
