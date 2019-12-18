@@ -6,7 +6,7 @@ You will use Express to handle routing. Make sure you deploy your app to Heroku 
 <h2>Instructions</h2>
 
 <ol>
-<pre>
+
 <li>Your survey should have 10 questions of your choosing. Each answer should be on a scale of 1 to 5 based on how much the user agrees or disagrees with a question.</li>
 
 <li>Your <code>server.js</code> file should require the basic npm packages we've used in class: <code>express</code> and <code>path</code>.</li>
@@ -18,11 +18,10 @@ A default, catch-all route that leads to <code>home.html</code> which displays t
 
 <li>Your <code>apiRoutes.js</code> file should contain two routes:
     <ul>
-    <li>A GET route with the url <code>/api/friends.</code> This will be used to display a JSON of all possible friends.</li>
+    <li></li>
     <li>A POST routes <code>/api/friends</code>. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.</li>
     </ul>
 </li>
 
 <li>You should save your application's data inside of <code>app/data/friends.js</code> as an array of objects. Each of these objects should roughly follow the format below.</li>
 </ol>
-</pre>
