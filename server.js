@@ -7,8 +7,10 @@ app.use(express.json());
 app.use(express.static("./app/public"));
 
 const apiRoutes = require("./app/routing/apiRoutes.js");
-
 app.use("/", apiRoutes);
+
+const publicRoute = require("./app/routing/htmlRoutes.js");
+app.use("/", publicRoute);
 
 app.listen(PORT, () => {
     console.log(`listening on http://localhost:${PORT}`);
