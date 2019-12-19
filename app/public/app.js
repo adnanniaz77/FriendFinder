@@ -12,20 +12,6 @@ $(document).ready(() => {
         let surveyQ8 = $("#q8").val();
         let surveyQ9 = $("#q9").val();
         let surveyQ10 = $("#q10").val();
-        // console.log(
-        //     surveyName,
-        //     surveyLink,
-        //     surveyQ1,
-        //     surveyQ2,
-        //     surveyQ3,
-        //     surveyQ4,
-        //     surveyQ5,
-        //     surveyQ6,
-        //     surveyQ7,
-        //     surveyQ8,
-        //     surveyQ9,
-        //     surveyQ10
-        // );
         validateForm();
     });
 
