@@ -38,11 +38,9 @@ $(document).ready(() => {
                 method: "POST",
                 data: userData
             }).then(res => {
-                console.log(res.name + "\n" + res.photo);
-                $("#bestFriend").text(res.name);
-                $("#bestFriendPhoto").text(res.photo);
                 $("#bestFriend").text(res.name);
                 $("#bestFriendPhoto").attr("src", res.photo);
+                $("#bestFriendModal").modal("toggle");
             });
         }
     });
