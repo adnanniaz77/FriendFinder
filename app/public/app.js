@@ -1,27 +1,49 @@
 $(document).ready(() => {
     $("#submit").click(() => {
-        let surveyName = $("#name").val();
-        let surveyLink = $("#photo").val();
-        let surveyQ1 = $("#q1").val();
-        let surveyQ2 = $("#q2").val();
-        let surveyQ3 = $("#q3").val();
-        let surveyQ4 = $("#q4").val();
-        let surveyQ5 = $("#q5").val();
-        let surveyQ6 = $("#q6").val();
-        let surveyQ7 = $("#q7").val();
-        let surveyQ8 = $("#q8").val();
-        let surveyQ9 = $("#q9").val();
-        let surveyQ10 = $("#q10").val();
-        validateForm();
-    });
+        if (
+            $("#name").val() === "" ||
+            $("#photo").val() === "" ||
+            $("#question1").select === "" ||
+            $("#question2").val() === "" ||
+            $("#question3").val() === "" ||
+            $("#question4").val() === "" ||
+            $("#question5").val() === "" ||
+            $("#question6").val() === "" ||
+            $("#question7").val() === "" ||
+            $("#question8").val() === "" ||
+            $("#question9").val() === "" ||
+            $("#question10").val() === ""
+        ) {
+            alert("Please fill out the missing input");
+        } else {
+            let userData = {
+                name: $("#name").val(),
+                photo: $("#photo").val(),
+                scores: [
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
+                ]
+            };
 
-    function validateForm() {
-        let allFormFields = $("select");
-        for (let i = 0; i < allFormFields.length; i++) {
-            if (allFormFields[i].value === "") {
-                alert("Please Compete the form before submitting");
-                break;
-            }
+            $.ajax({
+                url: "/api/friends",
+                method: "POST",
+                data: userData
+            }).then(res => {
+                console.log(res.name + "\n" + res.photo);
+                $("#bestFriend").text(res.name);
+                $("#bestFriendPhoto").text(res.photo);
+                $("#bestFriend").text(res.name);
+                $("#bestFriendPhoto").attr("src", res.photo);
+            });
         }
-    }
+    });
 });
